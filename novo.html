@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de exemplo com texto corrido e barra de rolagem">
+    <title>ONGs Online</title>
+    <style>
+        /* Estilos para simular o layout com paleta azul e preto */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a2a; /* Preto azulado */
+            color: #f0f0f0; /* Branco suave */
+            opacity: 0; /* Inicia invisível para animação */
+            animation: fadeIn 1s forwards; /* Aparece suavemente */
+        }
+
+        /* Animação de fade-in para o corpo */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Animação de deslizamento para o conteúdo */
+        @keyframes slideUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: #003366; /* Azul escuro */
+            color: #f0f0f0; /* Branco suave */
+            padding: 20px 0;
+            text-align: center;
+            animation: slideUp 1s ease-out; /* Animação para o header */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .content {
+            width: 75%;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: #121a33; /* Azul escuro mais intenso */
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Sombra suave */
+            overflow-y: auto; /* Permite a rolagem quando o conteúdo exceder o limite de altura */
+            max-height: 800px; /* Ajustando a altura máxima para mais conteúdo */
+            animation: slideUp 1s ease-out 0.5s; /* Animação para o conteúdo */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #001f4d; /* Azul mais escuro */
+            padding: 15px 0;
+            animation: slideUp 1s ease-out 0.7s; /* Animação para a barra de navegação */
+        }
+
+        .navbar a {
+            color: #e6e6e6; /* Cinza claro */
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #00509e; /* Azul mais claro para hover */
+            color: #fff;
+        }
+
+        h1, h2 {
+            color: #ffffff; /* Branco */
+        }
+
+        p {
+            line-height: 1.6;
+            color: #e6e6e6; /* Cinza claro */
+        }
+
+        footer {
+            background-color: #003366; /* Azul escuro */
+            color: #f0f0f0; /* Branco suave */
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+            animation: slideUp 1s ease-out 1s; /* Animação para o footer */
+        }
+
+        ul {
+            color: #e6e6e6; /* Cinza claro */
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para a nova seção de imagens */
+        .image-section {
+            background-color: #121a33;
+            padding: 20px;
+            margin-top: 40px;
+            animation: slideUp 1s ease-out 1.2s; /* Animação para a seção de imagens */
+        }
+
+        .image-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Estilos para as imagens */
+        .image-gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionando transição */
+        }
+
+        /* Efeito de animação quando o mouse passa sobre a imagem */
+        .image-gallery img:hover {
+            transform: scale(1.1); /* Aumenta o tamanho da imagem */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Efeito de sombra mais forte */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ONGs Online</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2 id="introducao">Introdução</h2>
+            <p>O site, ONGs Online, visa a divulgação e insentivo as práticas de trabalhos voluntários do público. Será abordado no site, a história, curiosidades e os nomes das ONGs linkados no site oficial. Como objetivo principal temos a busca pela sensibilidade das pessoas sobre o assunto, dessa forma, conseguindo promover o nosso site e o tema do site. O site é um pequeno projeto de um grupo de 7 alunos da E.E.E.P Paulo Petrola com o objetivo de aprimorar nossas práticas como programadores, logo, o site é experimental.</p>
+            
+            <h2 id="historia">História</h2>
+            <p>A história das ONGs (Organizações Não Governamentais) no Ocidente está ligada ao desenvolvimento das sociedades civis e das lutas sociais ao longo dos séculos. Essas organizações, por não dependerem do governo e geralmente sem fins lucrativos, surgiram como uma forma de ação independente para resolver questões sociais, políticas e econômicas. Abaixo, apresento um resumo da evolução das ONGs no Ocidente:</p>
+
+            <p>As raízes das ONGs no Ocidente podem ser rastreadas até o final do século XVIII e início do XIX, com o fortalecimento da sociedade civil e o surgimento de movimentos sociais. Um exemplo pioneiro foi o movimento abolicionista, que buscava a emancipação dos escravizados. Além disso, organizações de caridade, como a Cruz Vermelha (fundada em 1863), começaram a atuar em áreas como saúde, educação e assistência a desastres.</p>
+                
+            <p>No século XX, as ONGs começaram a se diversificar, abrangendo uma gama mais ampla de causas, como direitos humanos, meio ambiente, saúde, igualdade de gênero, e desenvolvimento internacional. A Primeira e a Segunda Guerra Mundial também foram momentos marcantes para o fortalecimento dessas organizações, já que muitas surgiram para ajudar na recuperação pós-guerra e no auxílio às vítimas de conflitos.</p>
+                
+            <p>Em 1945, com a criação das Nações Unidas, as ONGs também ganharam mais relevância, especialmente aquelas que buscavam influenciar políticas internacionais, como as relacionadas a direitos humanos, e após a Segunda Guerra, a Cruz Vermelha e outras organizações de ajuda humanitária se expandiram ainda mais.</p>
+                
+            <p>A partir da década de 1970, com o crescimento da globalização e a maior interconexão entre os países, as ONGs passaram a desempenhar um papel ainda mais central em temas globais, como a preservação ambiental, os direitos humanos e o combate à pobreza. Organizações como o Greenpeace e Médicos Sem Fronteiras ganharam destaque internacional.</p>
+                
+            <p>Nos anos 1990 e 2000, as ONGs passaram a ter uma forte presença nas negociações internacionais, influenciando políticas públicas e participando ativamente de fóruns como a Cúpula da Terra, em 1992, no Rio de Janeiro. Além disso, o financiamento por parte de governos, fundações e empresas também aumentou, fazendo com que muitas ONGs se tornassem mais profissionais em suas estruturas.</p>
+            
+            <p>Atualmente, as ONGs enfrentam desafios relacionados a questões como a falta de financiamento, a crescente pressão política e a necessidade de se adaptar às novas tecnologias e métodos de comunicação. Muitas organizações passaram a usar a internet e as redes sociais para promover suas causas e engajar novos públicos.</p>
+                
+            <p>O movimento das ONGs também se diversificou ainda mais, incluindo uma forte atuação nas áreas de justiça social, mudanças climáticas, proteção de minorias e direitos dos refugiados, entre outras questões globais.
+                </p>
+
+            <h2 id="curiosidades">Curiosidades sobre as ONGs</h2>
+            <ul>
+                <li><a href="https://anistia.org.br/">Amnesty International (Anistia Internacional):
+                </a>
+                A Anistia Internacional foi fundada em 1961 por um advogado britânico chamado Peter Benenson, após ele ler sobre dois estudantes portugueses presos por brindarem à liberdade de expressão. Desde então, a organização tem trabalhado incansavelmente para combater violações de direitos humanos em todo o mundo.</li>
+
+                <li><a href="https://doe.greenpeace.org.br/institucional-google-paid?cc=701Pm00000DislBIAR&utm_source=google&utm_medium=paid&utm_campaign=institucional&utm_content=aq_search&gad_source=1&gclid=EAIaIQobChMI2-aQ0tTwiQMVmF5IAB37RBshEAAYASAAEgKMx_D_BwE">Greenpeace:</a>
+                O Greenpeace foi fundado em 1971 no Canadá, por um grupo de ativistas que protestaram contra os testes nucleares dos EUA no Alasca. Sua primeira grande ação de protesto foi contra um teste nuclear, onde utilizaram um barco chamado "Greenpeace" para se aproximar da área de teste.</li>
+
+                <li><a href="https://doe.cicv.org.br/salve-vidas/single_step?utm_source=google&utm_medium=search&utm_campaign=emergency-lebanon-2024&gclid=EAIaIQobChMIkfLIntXwiQMVo1lIAB37lSMsEAAYASAAEgLSyfD_BwE">Cruz Vermelha Internacional:</a>
+                A Cruz Vermelha foi criada em 1863 por Henry Dunant, após testemunhar a brutalidade da Batalha de Solferino na Itália. Dunant teve a ideia de criar uma organização neutra que ajudaria as vítimas de guerra, independentemente de sua nacionalidade</li>
+
+                <li><a href="https://doe.msf.org.br/politica-de-doacoes?gad_source=5&gclid=EAIaIQobChMIhYyP2dXwiQMVzVxIAB29RykgEAAYASAAEgI-UfD_BwE">Médecins Sans Frontières (Médicos Sem Fronteiras):</a>
+                A organização foi fundada em 1971 por um grupo de médicos e jornalistas na França, após perceberem a falta de respostas rápidas em situações de crise. Um dos princípios fundamentais é a neutralidade, não se envolvendo em conflitos políticos ou militares.</li>
+
+                <li><a href="https://doe.wwf.org.br/brasil?gad_source=1&gclid=EAIaIQobChMI7661htbwiQMVU1VIAB1n3idbEAAYAyAAEgJqTPD_BwE">World Wildlife Fund (WWF):</a>
+                 A WWF foi fundada em 1961, e seu primeiro grande projeto foi ajudar a salvar o panda gigante da extinção. O logotipo da WWF, de fato, é inspirado nesse animal, um símbolo de conservação da biodiversidade.</li>
+
+                <li><a href="https://doe.oxfam.org.br/calendario-2025-doacao-mensal-google/single_step?gad_source=1&gclid=EAIaIQobChMIu7yyuNbwiQMVOkFIAB3fFD1LEAAYASAAEgLW8vD_BwE">Oxfam:</a>
+                Oxfam foi criada durante a Segunda Guerra Mundial por um grupo de pessoas preocupadas com a fome na Grécia, após a ocupação nazista. A organização começou com um foco na ajuda emergencial e, posteriormente, se expandiu para causas de justiça social e direitos humanos.</li>
+
+                <li><a href="https://www.savethechildren.org/">Save the Children:</a>
+                Fundada em 1919 por Eglantyne Jebb, Save the Children começou com o objetivo de ajudar crianças afetadas pela Primeira Guerra Mundial. Uma curiosidade interessante é que a organização foi a responsável pela criação da "Declaração dos Direitos da Criança", adotada pela ONU em 1959.</li>
+
+                <li><a href="https://www.hrw.org/">Human Rights Watch:</a>
+                Human Rights Watch foi fundada em 1978 sob o nome de "Helsinki Watch" para monitorar a implementação dos Acordos de Helsinque durante a Guerra Fria. A organização tem uma abordagem focada na pesquisa e na denúncia de abusos contra os direitos humanos em todo o mundo.</li>
+            </ul>
+
+        </div>
+    </div>
+    <center>
+        <footer>
+            <p>&copy; 2024 ONG's Online | Todos os direitos reservados.</p>
+        </footer>
+
+</center>
+    </html>
